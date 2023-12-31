@@ -1,11 +1,10 @@
-let { TokenType, Token } = require("./lang/token");
+import { Lexer } from "./lang/lexer";
 
 let main = function(): void {
-	console.log("Hello World!");
+	let lexer = new Lexer("+-*/%^ += -= *= /= %= ^= < > = <= >= == != .,:;&|!");
+	let tokens = lexer.lexerize();
 
-	let token = new Token(TokenType.String, "Hello World!");
-	console.log( token.string() );
-	console.log( token );
+	console.log(tokens);
 }
 
 main();

@@ -1,4 +1,4 @@
-enum TokenType {
+export enum TokenType {
 	Operator,
 
 	Number,
@@ -19,11 +19,11 @@ enum TokenType {
 	EOF,
 }
 
-class Token {
+export class Token {
 	public type: TokenType;
 	public value: any;
 
-	public constructor(type: TokenType, value: any) {
+	public constructor(type: TokenType, value: any = null) {
 		this.type = type;
 		this.value = value;
 	}
@@ -40,5 +40,3 @@ class Token {
 		return `Token { type: ${this.type}, value: ${this.value} }`;
 	}
 }
-
-module.exports = { TokenType, Token };

@@ -1,3 +1,6 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Token = exports.TokenType = void 0;
 var TokenType;
 (function (TokenType) {
     TokenType[TokenType["Operator"] = 0] = "Operator";
@@ -15,9 +18,10 @@ var TokenType;
     TokenType[TokenType["Pipe"] = 12] = "Pipe";
     TokenType[TokenType["Comment"] = 13] = "Comment";
     TokenType[TokenType["EOF"] = 14] = "EOF";
-})(TokenType || (TokenType = {}));
+})(TokenType || (exports.TokenType = TokenType = {}));
 var Token = /** @class */ (function () {
     function Token(type, value) {
+        if (value === void 0) { value = null; }
         this.type = type;
         this.value = value;
     }
@@ -33,4 +37,4 @@ var Token = /** @class */ (function () {
     };
     return Token;
 }());
-module.exports = { TokenType: TokenType, Token: Token };
+exports.Token = Token;

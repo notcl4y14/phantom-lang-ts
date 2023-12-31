@@ -1,8 +1,9 @@
-var _a = require("./lang/token"), TokenType = _a.TokenType, Token = _a.Token;
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var lexer_1 = require("./lang/lexer");
 var main = function () {
-    console.log("Hello World!");
-    var token = new Token(TokenType.String, "Hello World!");
-    console.log(token.string());
-    console.log(token);
+    var lexer = new lexer_1.Lexer("+-*/%^ += -= *= /= %= ^= < > = <= >= == != .,:;&|!");
+    var tokens = lexer.lexerize();
+    console.log(tokens);
 };
 main();

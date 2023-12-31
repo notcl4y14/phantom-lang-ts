@@ -3,6 +3,9 @@
 // https://github.com/notcl4y14/phantom-lang
 // -----------------------------------------------------------------------
 
+// 31/12/2023
+- Created lexer.ts
+
 // 30/12/2023
 - Initial release
 - Created main.ts
